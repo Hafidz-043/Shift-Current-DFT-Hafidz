@@ -1,0 +1,27 @@
+# Mengabaikan file output Quantum Espresso
+*.save/
+*.wfc/
+*.igk
+
+# Mengabaikan file input sementara
+*.tmp
+*.temp
+
+# Mengabaikan file log
+*.log
+*.error
+
+# Mengabaikan folder build dan temp
+build/
+temp/
+
+# Mengabaikan semua file .bak
+*.bak
+
+# Mengabaikan file sementara editor
+*~
+
+# Mengabaikan folder outdir yang sering digunakan sebagai direktori output
+outdir/
+Primitive-1/
+Primitive-4/

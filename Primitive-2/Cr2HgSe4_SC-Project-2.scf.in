@@ -1,0 +1,56 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr = 1.4d-04
+  forc_conv_thr = 1.0d-04
+  pseudo_dir = '/home/hafidz/Documents/DFT/Pseudopotential/rrkjus'
+  outdir = '/home/hafidz/Documents/PKL/Kalkulasi-DFT/Project-Shift-Current-Multi-Weyl-Semimetal/Cr2HgSe4/Primitive-2/outdir'
+  prefix = 'Cr2HgSe4-SC-Project-2'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'low'
+/
+&SYSTEM
+  ibrav = 0
+  nat = 14
+  ntyp = 3
+  ecutwfc = 50.0
+  ecutrho = 320.0
+  occupations = 'smearing'
+  smearing = 'cold'
+  degauss = 0.1
+  nspin = 2
+  starting_magnetization(1) = 0.1
+  nbnd = 120
+/
+&ELECTRONS
+  conv_thr = 2.8d-07
+  electron_maxstep = 80
+  mixing_beta = 0.4
+/
+ATOMIC_SPECIES
+Cr 51.9961 Cr.pbe-spn-rrkjus_psl.1.0.0.UPF
+Hg 200.592 Hg.pbe-spn-rrkjus_psl.1.0.0.UPF
+Se 78.971  Se.pbe-n-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS crystal
+Cr            0.8750000000        0.3750000000        0.3750000000
+Cr            0.3750000000        0.3750000000        0.8750000000
+Cr            0.3750000000        0.3750000000        0.3750000000
+Cr            0.3750000000        0.8750000000        0.3750000000
+Hg            0.0000005093        0.0000005093       -0.0000015105
+Hg            0.7499994907        0.7499994907        0.7500015105
+Se            0.5730511449        0.1423162236        0.1423165298
+Se            0.1423165062        0.1423165062        0.5730506013
+Se            0.1769488551        0.6076837764        0.6076834702
+Se            0.1423162236        0.5730511449        0.1423165298
+Se            0.1423161545        0.1423161545        0.1423164414
+Se            0.6076837764        0.1769488551        0.6076834702
+Se            0.6076838455        0.6076838455        0.6076835586
+Se            0.6076834938        0.6076834938        0.1769493987
+K_POINTS automatic
+5 5 5 0 0 0
+CELL_PARAMETERS angstrom
+ 2.226296 6.296917 3.856058
+ 2.226296 6.296917 -3.856058
+-4.452593 6.296917 0.000000
+

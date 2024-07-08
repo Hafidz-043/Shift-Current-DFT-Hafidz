@@ -1,0 +1,50 @@
+
+     Program DOS v.6.7MaX starts on  7Jul2024 at 22:56:42 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     4 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =       4
+
+     Reading xml data from directory:
+
+     /home/hafidz/Documents/PKL/Kalkulasi-DFT/Project-Shift-Current-Multi-Weyl-Semimetal/Cr2HgSe4/Primitive-2/outdir/Cr2HgSe4-SC-Project-2.save/
+     file Cr.pbe-spn-rrkjus_psl.1.0.0.UPF: wavefunction(s)  3P renormalized
+     file Hg.pbe-spn-rrkjus_psl.1.0.0.UPF: wavefunction(s)  5P renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min        1171     729    205                52939    26143    3868
+     Max        1174     730    206                52940    26146    3869
+     Sum        4687    2917    823               211759   104579   15473
+
+
+     Check: negative core charge=   -0.000002
+
+     Gaussian broadening (read from file): ngauss,degauss=  -1    0.100000
+
+
+     DOS          :      9.72s CPU     10.09s WALL
+
+
+   This run was terminated on:  22:56:52   7Jul2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

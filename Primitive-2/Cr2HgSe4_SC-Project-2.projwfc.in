@@ -1,0 +1,7 @@
+&PROJWFC
+  outdir = '/home/hafidz/Documents/PKL/Kalkulasi-DFT/Project-Shift-Current-Multi-Weyl-Semimetal/Cr2HgSe4/Primitive-2/outdir'
+  prefix = 'Cr2HgSe4-SC-Project-2'
+  filpdos = 'Cr2HgSe4-SC-Project-2.PDOS.dat'
+  degauss = 0.1
+/  
+  
