@@ -1,5 +1,5 @@
 
-     Program DOS v.6.7MaX starts on  7Jul2024 at 22:56:42 
+     Program DOS v.6.7MaX starts on  9Jul2024 at  8:30: 6 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -30,9 +30,9 @@
      Parallelization info
      --------------------
      sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
-     Min        1171     729    205                52939    26143    3868
-     Max        1174     730    206                52940    26146    3869
-     Sum        4687    2917    823               211759   104579   15473
+     Min        1171     729    211                52939    26143    4011
+     Max        1174     730    212                52940    26146    4013
+     Sum        4687    2917    847               211759   104579   16049
 
 
      Check: negative core charge=   -0.000002
@@ -40,10 +40,10 @@
      Gaussian broadening (read from file): ngauss,degauss=  -1    0.100000
 
 
-     DOS          :      9.72s CPU     10.09s WALL
+     DOS          :      8.91s CPU      9.21s WALL
 
 
-   This run was terminated on:  22:56:52   7Jul2024            
+   This run was terminated on:   8:30:15   9Jul2024            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
