@@ -1,54 +1,88 @@
-&CONTROL
-  calculation = 'nscf'
-  etot_conv_thr = 1.4d-04
-  forc_conv_thr = 1.0d-04
-  pseudo_dir = '/home/hafidz/Documents/DFT/Pseudopotential/rrkjus'
-  outdir = '/home/hafidz/Documents/PKL/Kalkulasi-DFT/Project-Shift-Current-Multi-Weyl-Semimetal/Cr2HgSe4/Primitive-2/outdir'
-  prefix = 'Cr2HgSe4-SC-Project-2'
-  tprnfor = .true.
-  tstress = .true.
-  verbosity = 'low'
-/
-&SYSTEM
-  ibrav = 0
-  nat = 14
-  ntyp = 3
-  ecutwfc = 50.0
-  ecutrho = 320.0
-  occupations = 'smearing'
-  smearing = 'cold'
-  degauss = 0.1
-  nspin = 2
-  starting_magnetization(1) = 0.1
-  nbnd = 120
-/
-&ELECTRONS
-  conv_thr = 2.8d-07
-  electron_maxstep = 100
-  mixing_beta = 0.7
-/
-ATOMIC_SPECIES
-Cr 51.9961 Cr.pbe-spn-rrkjus_psl.1.0.0.UPF
-Hg 200.592 Hg.pbe-spn-rrkjus_psl.1.0.0.UPF
-Se 78.971  Se.pbe-n-rrkjus_psl.1.0.0.UPF
+# BERRY
+###############
+write_hr     = true
+berry        = true
+berry_task   = sc
+berry_kmesh  = 100 100 100
+fermi_energy = 8.0051
+kubo_freq_min  =   0.0
+kubo_freq_max  =   10.0
+kubo_freq_step =  0.03
+kubo_adpt_smr  =   true
+sc_eta        = 0.040
+sc_phase_conv = 2
 
-ATOMIC_POSITIONS crystal
+###############
+
+
+# W90
+###############
+num_bands         =      120 # H 120# A 52
+num_wann          =      44  # 52
+
+num_iter          = 1000
+num_print_cycles  = 40
+
+# dis_win_max       =    24.95 d0
+# dis_froz_min      =  4 d0
+# dis_froz_min      = 12 d0
+
+dis_num_iter      =  1000
+dis_mix_ratio     =  1.d0
+
+
+#restart = wannierise
+
+#restart = plot
+
+bands_plot : true
+bands_num_points  : 120
+bands_plot_format : gnuplot
+
+
+begin unit_cell_cart
+Ang
+ 2.226296 6.296917 3.856058
+ 2.226296 6.296917 -3.856058
+-4.452593 6.296917 0.000000
+end unit_cell_cart
+
+#reciprocal lattice units
+
+Begin Kpoint_Path
+G    0.0   0.0   0.0   U    0.625 0.25  0.625
+X    0.5   0.0   0.5   W    0.5   0.25  0.75
+W    0.5   0.25  0.75  L    0.5   0.5   0.5
+K    0.375 0.375 0.75  K    0.375 0.375 0.75
+G    0.0   0.0   0.0   U    0.625 0.25  0.625
+L    0.5   0.5   0.5   X    0.5   0.0   0.5
+End Kpoint_Path
+
+begin projections
+   Cr : dxy; dyz; dxz; dx2-y2; dz2
+   Se : px ;py ;pz
+end projections
+
+begin atoms_frac
 Cr            0.8750000000        0.3750000000        0.3750000000
 Cr            0.3750000000        0.3750000000        0.8750000000
 Cr            0.3750000000        0.3750000000        0.3750000000
 Cr            0.3750000000        0.8750000000        0.3750000000
-Hg            0.0000005093        0.0000005093       -0.0000015105
-Hg            0.7499994907        0.7499994907        0.7500015105
-Se            0.5730511449        0.1423162236        0.1423165298
-Se            0.1423165062        0.1423165062        0.5730506013
-Se            0.1769488551        0.6076837764        0.6076834702
-Se            0.1423162236        0.5730511449        0.1423165298
-Se            0.1423161545        0.1423161545        0.1423164414
-Se            0.6076837764        0.1769488551        0.6076834702
-Se            0.6076838455        0.6076838455        0.6076835586
-Se            0.6076834938        0.6076834938        0.1769493987
-K_POINTS crystal
-125
+Hg           -0.0000001544       -0.0000001544       -0.0000006865
+Hg            0.7500001544        0.7500001544        0.7500006865
+Se            0.5734582470        0.1421804918        0.1421805390
+Se            0.1421805607        0.1421805607        0.5734580620
+Se            0.1765417530        0.6078195082        0.6078194610
+Se            0.1421804918        0.5734582470        0.1421805390
+Se            0.1421804598        0.1421804598        0.1421803994
+Se            0.6078195082        0.1765417530        0.6078194610
+Se            0.6078195402        0.6078195402        0.6078196006
+Se            0.6078194393        0.6078194393        0.1765419380
+end atoms_frac
+
+mp_grid = 5 5 5
+
+begin kpoints
   0.00000000  0.00000000  0.00000000  8.000000e-03
   0.00000000  0.00000000  0.20000000  8.000000e-03
   0.00000000  0.00000000  0.40000000  8.000000e-03
@@ -174,10 +208,7 @@ K_POINTS crystal
   0.80000000  0.80000000  0.40000000  8.000000e-03
   0.80000000  0.80000000  0.60000000  8.000000e-03
   0.80000000  0.80000000  0.80000000  8.000000e-03
+end kpoints
 
-  
-CELL_PARAMETERS angstrom
- 2.226296 6.296917 3.856058
- 2.226296 6.296917 -3.856058
--4.452593 6.296917 0.000000
 
+###############

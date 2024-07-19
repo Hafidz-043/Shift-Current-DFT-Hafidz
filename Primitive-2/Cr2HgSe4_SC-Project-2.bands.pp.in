@@ -1,0 +1,5 @@
+&BANDS
+  prefix = 'Cr2HgSe4-SC-Project-2'
+  outdir = '/home/hafidz/Documents/PKL/Kalkulasi-DFT/Project-Shift-Current-Multi-Weyl-Semimetal/Cr2HgSe4/Primitive-2/outdir'
+  filband = 'Cr2HgSe4_SC-Project-2.bands.out.dat'
+/
